@@ -1,0 +1,10 @@
+#/bin/env python
+top = '..'
+
+def build(bld):
+    bld.recurse('tools')
+    bld.recurse('Storage_Module')
+    bld.recurse('IP_Module')
+    bld.recurse('NDN_Module')
+    bld.recurse('test')
+    bld.recurse('App')

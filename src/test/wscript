@@ -1,0 +1,40 @@
+#!/bin/env python
+top = '..'
+
+def build(bld):
+    bld.program(
+            feature = 'cxx',
+            target = '../../bin/test/getLocalInfo',
+            source = 'getLocalInfo.cpp',
+            use = 'Tools COMPILER',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../bin/test/logTest',
+            source = "logTest.cpp",
+            use = 'Tools',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../bin/test/FileTest',
+            source = 'FileRW.cpp',
+            use = 'Tools COMPILER Storage_Module',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../bin/test/IP_Test',
+            source = 'test_C_S.cpp',
+            use = 'Tools COMPILER Storage_Module IP_Module',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../bin/test/NDN_Test',
+            source = 'test_C_P.cpp',
+            use = 'Tools COMPILER Storage_Moudle NDN_Module',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../bin/test/NDN_Test2',
+            source = 'test_NDN.cpp',
+            use = 'Tools,COMPILER Storage_Module NDN_Module',
+        )

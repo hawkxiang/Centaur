@@ -1,0 +1,52 @@
+#!/bin/env python
+top = '..'
+
+def build(bld):
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_QUIT',
+            source = 'quit.cpp',
+            use = 'COMPILER BOOST',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_PROXY',
+            source = 'proxy.cpp',
+            use = 'COMPILER BOOST',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_PREFETCH',
+            source = 'prefetch.cpp',
+            use = 'COMPILER BOOST',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_ADD',
+            source = 'adddata.cpp',
+            use = 'COMPILER BOOST',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_DEL',
+            source = 'deldata.cpp',
+            use = 'COMPILER BOOST',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_REQ_B',
+            source = 'reqdatabase.cpp',
+            use = 'COMPILER BOOST',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_REQ_P',
+            source = 'reqdatapipeline.cpp',
+            use = 'COMPILER BOOST',
+        )
+    bld.program(
+            feature = 'cxx',
+            target = '../../../bin/app/C_REQ_N',
+            source = 'reqdatandn.cpp',
+            use = 'COMPILER BOOST',
+        )

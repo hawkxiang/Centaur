@@ -1,0 +1,11 @@
+#!/bin/env python
+top = '..'
+
+def build(bld):
+    bld.program(
+            feature = 'cxx',
+            target = '../../bin/app/Centaur',
+            source = bld.path.ant_glob(['*.cpp']),
+            use = 'COMPILER BOOST Storage_Module NDN_Module IP_Module Tools',
+        )
+    bld.recurse('tools')

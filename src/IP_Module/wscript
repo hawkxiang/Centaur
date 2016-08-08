@@ -1,0 +1,10 @@
+#/bin/env python
+
+def build(bld):
+    bld(
+            target = 'IP_Module',
+            name = 'IP_Module',
+            features = 'cxx',
+            source = bld.path.ant_glob(['*cpp']),
+            use = 'NDN_CXX BOOST Tools Storage_Module'
+        )

@@ -1,0 +1,10 @@
+#!/bin/env python
+
+def build(bld):
+    bld(
+            target = 'Storage_Module',
+            name = 'Storage_Module',
+            features = 'cxx',
+            source = bld.path.ant_glob(['*.cpp']),
+            use = 'COMPILER BOOST Tools'
+        )
